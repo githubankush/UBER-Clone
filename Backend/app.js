@@ -18,7 +18,7 @@ app.use("/users", userRoutes);
 app.use("/captains", captainRoutes);
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    res.send("Hello World, !!!HAPPY HAPPY HAPPY 5X Happy");
 });
 
 

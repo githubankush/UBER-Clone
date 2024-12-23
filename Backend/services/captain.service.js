@@ -22,6 +22,7 @@ module.exports.createCaptain = async({
             vehicleType
         }
     });
-
-    return captain;
+    // Save the captain to the database
+    const savedCaptain = await captain.save();
+    return savedCaptain;
 }
