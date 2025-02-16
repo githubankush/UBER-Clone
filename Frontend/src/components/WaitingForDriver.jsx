@@ -1,0 +1,56 @@
+import React from 'react'
+
+const WaitingForDriver = (props) => {
+  return (
+    <div>
+      <h5 className="w-full flex items-center justify-center">
+        <i
+          onClick={() => {
+            props.setWaitingForDriver(false);
+          }}
+          className="ri-arrow-down-wide-line"
+        ></i>
+      </h5>
+
+      <div className='flex justify-between items-center'>
+         <img className="h-20" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_368,w_552/v1712027307/assets/42/eb85c3-e2dc-4e95-a70d-22ee4f08015f/original/Screenshot-2024-04-01-at-9.08.07p.m..png" alt="" />
+        <div className='text-right -mt-1 -mb-2'>
+            <h2 className='text-lg font-bold'>Jassi Bhai</h2>
+            <h4 className='text-xl font-semibold'>MP09 ZG 8778</h4>
+            <p className='text-sm font-medium text-gray-600'>Honda City</p>
+        </div>
+      </div>
+
+      <div className="flex gap-5 items-center justify-between flex-col">
+        
+        <div className="w-full flex flex-col gap-3 mt-5">
+          <div className="flex items-center justify-start gap-3 p-2 border-b-2 ">
+            <i class="ri-map-pin-2-fill"></i>
+            <div>
+              <h4 className="font-medium">
+                69/2 Vijayvargiya Nagar Banganga, Indore
+              </h4>
+              <p className="text-gray-500">Indore, Madhya Pradesh</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-start gap-3 p-2 border-b-2 ">
+            <i className="ri-map-pin-fill"></i>
+            <div>
+              <h4 className="font-medium">Bhanwarkuan, Indore</h4>
+              <p className="text-gray-500">Indore, Madhya Pradesh</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-start gap-3 p-2 ">
+            <i className="ri-money-rupee-circle-line"></i>
+            <div>
+              <h3 className="font-semibold">₹238</h3>
+              <p className="text-gray-500 text-sm">Cash Cash</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default WaitingForDriver
