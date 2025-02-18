@@ -7,6 +7,8 @@ const userRoutes = require("./routes/user.routes")
 const captainRoutes = require("./routes/captain.routes")
 const app = express()
 const cookieParser = require("cookie-parser")
+const mapsRoutes = require("./routes/maps.routes")
+const rideRoutes = require("./routes/ride.routes")
 
 ConnectToDB();
 app.use(cors());
@@ -16,11 +18,7 @@ app.use(cookieParser())
 
 app.use("/users", userRoutes);
 app.use("/captains", captainRoutes);
-
-app.get("/", (req, res) => {
-    res.send("Hello World, !!!HAPPY HAPPY HAPPY 5X Happy");
-});
-
-
+app.use("/maps", mapsRoutes);
+app.use("/rides", rideRoutes);
 
 module.exports = app;

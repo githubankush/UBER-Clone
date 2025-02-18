@@ -7,6 +7,7 @@ import axios from 'axios'
 const UserLogin = () => {
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
+  const [ userData, setUserData ] = useState({})
 
   const { user, setUser } = useContext(UserDataContext)
   const navigate = useNavigate()
@@ -26,7 +27,7 @@ const UserLogin = () => {
     if (response.status === 200) {
       const data = response.data
       setUser(data.user)
-      localStorage.setItem('token', data.token);
+      localStorage.setItem('token', data.token)
       navigate('/home')
     }
 
